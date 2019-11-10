@@ -1,21 +1,30 @@
-<ons-page id="homePage">
-    <ons-toolbar style="background-color:white;" modifier=" material transparent">
-        <i class="fas fa-bars fa-1x" style="margin-top: 20px; margin-left: 10px; color: gray;"></i>
-        <ons-search-input class="center" style="margin-top: 15px;" placeholder="Search something" v-model="query">
-        </ons-search-input>
-
-
-
+<ons-page id="homePage" >
+    
+    <ons-toolbar style="background-color:black;" modifier=" material transparent" >
+            <i class="fas fa-bars fa-1x" style="margin-top: 20px; margin-left: 10px; color: gray;"></i>
+            <ons-search-input class="center" style="margin-top: 15px;" placeholder="Search something" v-model="query">
+            </ons-search-input>
     </ons-toolbar>
+    
 
-    <ons-tabbar swipeable position="top">
-        <ons-tab page="foryou.html" label="For you" style="background-color:white;" active>
+    <ons-tabbar swipeable position="top" style="background-color: white;" >
+        <ons-tab page="foryou.html" style="background-color:black;" active-icon="md-face" >
+                <div class="label">For you</div>
         </ons-tab>
-        <ons-tab page="topcart.html" label="Top cart" style="background-color:white;" active-icon="md-face">
+        <ons-tab page="topchart.html" style="background-color:black;" active-icon="md-face">
+                <div class="label">Top chart</div>
         </ons-tab>
-        <ons-tab page="tab2.html" label="Premium" style="background-color:white;" active-icon="md-face">
+        <ons-tab page="premium.html" style="background-color:black;" active-icon="md-face">
+                <div class="label">Premium</div>
         </ons-tab>
-        <ons-tab page="tab2.html" label="Category" style="background-color:white;" active-icon="md-face">
+        <ons-tab page="category.html" style="background-color:black;" active-icon="md-face">
+                <div class="label">Category</div>
         </ons-tab>
+
     </ons-tabbar>
+    <style type="text/css">
+            .label{
+                color: white;
+            }
+            </style>
 </ons-page>
