@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Google Play</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link rel="manifest" href="/manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((reg) => {
+                        console.log('Service worker registered.', reg);
+                    });
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <ons-navigator id="myNavigator" page="splitter.html">
+    </ons-navigator>
+
+    <template id="splitter.html">
+        <ons-page>
+            <ons-splitter id="mySplitter">
+                <ons-splitter-side id="sidemenu" page="tools.html" width="300px;" swipeable width="250px" collapse
+                    swipe-target-width="50px">
+                </ons-splitter-side>
+                <ons-splitter-content page="home.html" id="content">
+                </ons-splitter-content>
+            </ons-splitter>
+        </ons-page>
+    </template>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+    </script>
+</body>
+
+</html>
